@@ -20,7 +20,19 @@ function AddRecipe() {
     event.preventDefault();
 
     
-    
+    fetch("http://localhost:8004/comments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newObj),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+
+    // form.current.reset()
     
   }
 
