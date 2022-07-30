@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Dessert from "./Dessert";
 
-function DessertContainer() {
+function GetRecipes({dessert,setDessert}) {
   const [searchItem, setSearchItem] = useState("");
-  const [dessert, setDessert] = useState([]);
+  
 
   function searchText(event) {
     console.log(event.target.value);
@@ -57,4 +57,4 @@ function DessertContainer() {
   );
 }
 
-export default DessertContainer;
+export default GetRecipes;

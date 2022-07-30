@@ -35,12 +35,12 @@ const NavBar = () => {
           </li>
           <li>
             <Link className="nav-link" to="/addrecipe">
-              Add Recipe
+              Comments
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/dessertcontainer">
-            Dessert Container
+            <Link className="nav-link" to="/getrecipes">
+            Get Recipes
             </Link>
           </li>
         </ul>

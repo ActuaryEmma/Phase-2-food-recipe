@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, {useState} from 'react';
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -9,9 +9,10 @@ import About from "../about/About";
 import Contact from "../contact/Contact";
 import Details from "../details/Details";
 import AddRecipe from "../addRecipe/AddRecipe";
-import DessertContainer from "../desserContainer/DessertContainer";
+import GetRecipes from "../desserContainer/GetRecipes";
 
 function App() {
+  const [dessert, setDessert] = useState([]);
   return (
     <Router>
       <div>
@@ -21,8 +22,8 @@ function App() {
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
-        <Route exact path="/addrecipe" element={<AddRecipe />}></Route>
-        <Route exact path="/dessertcontainer" element={<DessertContainer />}></Route>
+        <Route exact path="/addrecipe" element={<AddRecipe dessert={dessert} setDessert={setDessert}/>}></Route>
+        <Route exact path="/getrecipes" element={<GetRecipes dessert={dessert} setDessert={setDessert}/>}></Route>
         <Route exact path="/item/:mealId" element={<Details />}></Route>
       </Routes>
     </Router>

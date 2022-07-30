@@ -97,9 +97,9 @@ figcaption {
     font-size: 1em;
     font-family: sans-serif;
     margin-bottom: 0.5em;
-  }
+  }*/
   
-  input[type="submit"],
+  /* input[type="submit"],
   button {
     font-weight: bold;
     font-size: 1em;
@@ -110,13 +110,13 @@ figcaption {
    } */
 
 
-  /* .poems-container {
-    max-width: 70em;
-    margin-left: 100px;
+   .poemContainer {
+    /* max-width: 70em; */
+    margin-left: 10px;
     
     
-  }
-  
+  } 
+  /*
   .poems-container > div {
     border-bottom: solid 1px grey;
     padding-bottom: 1em;
