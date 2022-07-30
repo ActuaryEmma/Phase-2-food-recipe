@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Comment from "./Comment";
 
 function AddRecipe() {
- 
+  const formReset = useRef(null);
+
+  const [comments, setComments] = useState([]);
+
   const [newObj, setNewObj] = useState({
     name: "",
     title: "",
@@ -14,12 +17,10 @@ function AddRecipe() {
   function handleChange(event) {
     setNewObj({ ...newObj, [event.target.name]: event.target.value });
   }
- 
 
   function handleAddSubmit(event) {
     event.preventDefault();
 
-    
     fetch("http://localhost:8004/comments", {
       method: "POST",
       headers: {
@@ -28,25 +29,48 @@ function AddRecipe() {
       body: JSON.stringify(newObj),
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
+      .then((newdata) => setComments([...comments, newdata]));
 
-
-      
-    // form.current.reset()
-    
+    // formReset.current.reset();
+    setNewObj({
+      name: "",
+      title: "",
+      area: "",
+      comment: "",
+      emailAddress: "",
+    });
   }
 
   return (
-    <div style={{ backgroundColor: "grey" ,color: "black" , paddingLeft: 60 + "px" }}>
-      <div class="">
-        <form onSubmit={handleAddSubmit} className="new-poem-form">
-          <h2>New Recipe</h2>
-          <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Enter your Name:</label>
-            <div class="col-sm-8">
+    <div
+      style={{
+        backgroundColor: "grey",
+        color: "black",
+        paddingRight: 70 + "px",
+        display: "flex",
+      }}
+    >
+      <div className="poemContainer">
+        <Comment comments={comments} setComments={setComments} />
+      </div>
+      <div style={{ width: 800 + "px" }}>
+        <form
+          onSubmit={handleAddSubmit}
+          className="new-poem-form"
+          // ref={formReset}
+        >
+          <div style={{ marginLeft: 10 + "px" }}>
+            <h2>New Comment</h2>
+          </div>
+
+        
+          <br />
+
+          <div className="row mb-3">
+            <label className="col-sm-4 col-form-label">Enter your Name:</label>
+            <div className="col-sm-8">
               <input
+              
                 required
                 type="text"
                 className="form-control"
@@ -57,9 +81,9 @@ function AddRecipe() {
             </div>
           </div>
 
-          <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Email address: </label>
-            <div class="col-sm-8">
+          <div className="row mb-3">
+            <label className="col-sm-4 col-form-label">Email address: </label>
+            <div className="col-sm-8">
               <input
                 required
                 type="text"
@@ -71,9 +95,9 @@ function AddRecipe() {
             </div>
           </div>
 
-          <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Dessert title :</label>
-            <div class="col-sm-8">
+          <div className="row mb-3">
+            <label className="col-sm-4 col-form-label">Dessert title :</label>
+            <div className="col-sm-8">
               <input
                 required
                 type="text"
@@ -85,9 +109,9 @@ function AddRecipe() {
             </div>
           </div>
 
-          <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Dessert origin:</label>
-            <div class="col-sm-8">
+          <div className="row mb-3">
+            <label className="col-sm-4 col-form-label">Dessert origin:</label>
+            <div className="col-sm-8">
               <input
                 required
                 type="text"
@@ -99,9 +123,9 @@ function AddRecipe() {
             </div>
           </div>
 
-          <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Comments :</label>
-            <div class="col-sm-8">
+          <div className="row mb-4">
+            <label className="col-sm-4 col-form-label">Comments:</label>
+            <div className="col-sm-8">
               <textarea
                 required
                 className="form-control"
@@ -111,16 +135,14 @@ function AddRecipe() {
               ></textarea>
             </div>
           </div>
-          <div style={{marginLeft: 220+ "px"}}>
-          <input  style={{backgroundColor: "greenyellow"}} placeholdertype="submit" value="Add Comment" />
+          <div>
+            <button
+              style={{ backgroundColor: "greenyellow", marginLeft: 100 + "px" }}
+            >
+              Add Comment
+            </button>
           </div>
-
-          
         </form>
-      </div>
-
-      <div>
-        <Comment />
       </div>
     </div>
   );
