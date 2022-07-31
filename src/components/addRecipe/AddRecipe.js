@@ -53,7 +53,7 @@ function AddRecipe() {
       <div className="poemContainer">
         <Comment comments={comments} setComments={setComments} />
       </div>
-      <div style={{ width: 800 + "px" }}>
+      <div style={{ width: 1000 + "px" }}>
         <form
           onSubmit={handleAddSubmit}
           className="new-poem-form"

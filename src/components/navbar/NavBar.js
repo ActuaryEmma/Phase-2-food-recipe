@@ -14,7 +14,7 @@ const NavBar = () => {
             height="24"
             className="d-inline-block align-text-top"
           />
-          NYAKIO KITCHEN
+          The DESSERT OVEN
         </div>
 
         <ul className="nav justify-content-center">

@@ -80,52 +80,13 @@ figcaption {
   }
 
 
-  /* form.new-poem-form {
-    border: solid black 1px;
-    padding: 1em; */
-    /* display: grid; */
-    /* flex-direction: column;  */
-    /* width: 800px; */
-    /* background-color:black;
-    color: white; */
-    /* align-items: center; */
-    
-  /* } */
-  
-  /* form.new-poem-form > input,
-  form.new-poem-form > textarea {
-    font-size: 1em;
-    font-family: sans-serif;
-    margin-bottom: 0.5em;
-  }*/
-  
-  /* input[type="submit"],
-  button {
-    font-weight: bold;
-    font-size: 1em;
-    background: greenblue;
-    border: solid black 1px;
-    padding: 0.5em;
-    cursor: pointer; 
-   } */
-
 
    .poemContainer {
-    /* max-width: 70em; */
+   
     margin-left: 10px;
     
     
   } 
-  /*
-  .poems-container > div {
-    border-bottom: solid 1px grey;
-    padding-bottom: 1em;
-    
-  } */
-  
-  /* .poems-container > div > button {
-    min-width: 4em;
-  } */
 
   .cardcontainer {
     display: flex;

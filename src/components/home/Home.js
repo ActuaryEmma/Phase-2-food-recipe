@@ -2,9 +2,12 @@ import React from "react";
 import page from "../images/page.jpg";
 
 
+
 function Home() {
+
   return (
-    <div>
+   
+       <div>
       <div className="p-3 mb-2 bg-light ">
       <figure className="container position-relative  d-flex justify-content-around align-items-center ">
         <img
@@ -18,7 +21,7 @@ function Home() {
           <figcaption className="hometitle">
             The best part of dinner is the dessert, and it usually arrives when
             you can't eat anymore
-            <button className="btn btn-info  ">Get Recipe</button>
+  
           </figcaption>
         </div>
       </figure>
@@ -26,6 +29,9 @@ function Home() {
     
     </div>
     
+   
+      
+   
   );
 }
 

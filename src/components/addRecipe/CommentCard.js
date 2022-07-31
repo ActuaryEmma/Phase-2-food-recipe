@@ -25,7 +25,6 @@ function CommentCard({title, name, area, comment ,comments,emailAddress, setComm
             <p>Name: {name}</p>
             <p>Dessert Origin:{area}</p>
             <p>Comment: {comment}</p>
-            <p>email:{emailAddress}</p>
             <button  onClick={handleDelete} type="button" className="btn btn-info"> Delete</button>
             </div>
             
