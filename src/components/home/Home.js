@@ -1,9 +1,17 @@
 import React from "react";
 import page from "../images/page.jpg";
+import {useNavigate} from "react-router-dom"
 
 
 
 function Home() {
+
+  const history = useNavigate();
+
+  function handleClick (path){
+    history(path)
+
+  }
 
   return (
    
@@ -21,8 +29,11 @@ function Home() {
           <figcaption className="hometitle">
             The best part of dinner is the dessert, and it usually arrives when
             you can't eat anymore
-  
+           
+             <button  onClick= { () => handleClick("/getrecipes")}className="btn btn-info">Get Recipe</button>
           </figcaption>
+          
+          
         </div>
       </figure>
     </div>

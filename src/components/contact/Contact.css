@@ -1,0 +1,49 @@
+.contact{
+    position:relative;
+    min-height: 10vh;
+    padding: 50px 10px;
+    background-color: black;
+   
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.content{
+    font-size:36px;
+    text-align: center;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+   
+} 
+
+
+.containers{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+
+
+.containers .contactInfo .box .text{
+    display: flex;
+    margin-Left: 70px;
+   
+    color:white;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.containers .contactInfo .box .text h3{
+   
+    margin-Left: 20px;
+  
+    color:aqua;
+ 
+    font-weight: 500;
+}

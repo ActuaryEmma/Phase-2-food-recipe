@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Comment from "./Comment";
 
 function AddRecipe() {
-  const formReset = useRef(null);
+  
 
   const [comments, setComments] = useState([]);
 
@@ -31,7 +31,6 @@ function AddRecipe() {
       .then((response) => response.json())
       .then((newdata) => setComments([...comments, newdata]));
 
-    // formReset.current.reset();
     setNewObj({
       name: "",
       title: "",
@@ -50,14 +49,13 @@ function AddRecipe() {
         display: "flex",
       }}
     >
-      <div className="poemContainer">
+      <div className="card-Container">
         <Comment comments={comments} setComments={setComments} />
       </div>
       <div style={{ width: 1000 + "px" }}>
         <form
           onSubmit={handleAddSubmit}
-          className="new-poem-form"
-          // ref={formReset}
+
         >
           <div style={{ marginLeft: 10 + "px" }}>
             <h2>New Comment</h2>
@@ -88,7 +86,7 @@ function AddRecipe() {
                 required
                 type="text"
                 className="form-control"
-                value={newObj.email}
+                value={newObj.emailAddress}
                 name="emailAddress"
                 onChange={handleChange}
               />

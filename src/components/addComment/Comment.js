@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import CommentCard from "./CommentCard";
 
 function Comment({comments, setComments}) {

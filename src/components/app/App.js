@@ -8,7 +8,7 @@ import Home from "../home/Home";
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import Details from "../details/Details";
-import AddRecipe from "../addRecipe/AddRecipe";
+import AddRecipe from "../addComment/AddComment";
 import GetRecipes from "../desserContainer/GetRecipes";
 
 function App() {
