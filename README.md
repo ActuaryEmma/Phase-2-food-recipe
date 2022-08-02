@@ -9,6 +9,7 @@ You should keep your json-server data simple: avoid nested data and associations
 The application is a dessert recipe that enables you to find diffrent recipes.
 
 The list of desserts are from an external API from mealdb and are listed on Get Recipe component as below:
+![ get recipe image](components/images/getrecipe.png)
 
 
 To the recipe there is a Get Recipe button to click and data will be displayed as below:
