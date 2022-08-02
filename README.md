@@ -12,12 +12,18 @@ The list of desserts are from an external API from mealdb and are listed on Get 
 ![ get recipe image](src/components/images/getrecipe.png)
 
 
-To the recipe there is a Get Recipe button to click and data will be displayed as below:
+To get the recipe there is a Get Recipe button to click and data will be displayed as below:
+![recipe image](src/components/images/recipe.png)
+
+
+You can also search for the recipe and results will be displayed as below:
+![ results image](src/components/images/searchresults.png)
 
 
 
 
 For the post request the app  uses  json-server to post comments/feedback as listed on comments component and the user can also delete a  commenet posted and its displayed as below:
+![ comments image](src/components/images/comments.png)
 
 
 
