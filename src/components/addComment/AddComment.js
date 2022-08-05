@@ -29,7 +29,10 @@ function AddRecipe() {
       body: JSON.stringify(newObj),
     })
       .then((response) => response.json())
-      .then((newdata) => setComments([...comments, newdata]));
+      .then((newdata) => setComments([...comments, newdata]))
+      .catch((error) => {
+        console.log(error);
+      })
 
     setNewObj({
       name: "",

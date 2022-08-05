@@ -10,7 +10,10 @@ function Comment({comments, setComments}) {
       .then((data) => {
         setComments(data);
        
-      });
+      })
+      .catch((error) => {
+        console.log(error);
+      })
   }, []);
 
   

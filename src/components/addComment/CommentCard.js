@@ -12,6 +12,9 @@ function CommentCard({title, name, area, comment ,comments,emailAddress, setComm
           setComments(newData)
           console.log(newData)
         })
+        .catch((error) => {
+            console.log(error);
+          })
         }
       
 

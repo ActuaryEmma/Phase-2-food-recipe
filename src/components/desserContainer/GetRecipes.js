@@ -18,7 +18,10 @@ function GetRecipes({dessert,setDessert}) {
       .then((data) => {
         setDessert(data.meals);
         setIsLoading(true)
-      });
+      })
+      .catch((error) => {
+        console.log(error);
+      })
   }, []);
   if(!isLoading){
     return <h2> Loading.... </h2>
