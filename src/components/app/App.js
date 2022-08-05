@@ -10,6 +10,7 @@ import Contact from "../contact/Contact";
 import Details from "../details/Details";
 import AddRecipe from "../addComment/AddComment";
 import GetRecipes from "../desserContainer/GetRecipes";
+import Error from "./Error"
 
 function App() {
   const [dessert, setDessert] = useState([]);
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/addrecipe" element={<AddRecipe dessert={dessert} setDessert={setDessert}/>}></Route>
         <Route exact path="/getrecipes" element={<GetRecipes dessert={dessert} setDessert={setDessert}/>}></Route>
         <Route exact path="/item/:mealId" element={<Details />}></Route>
+        <Route exact path="*" element={<Error />}></Route>
       </Routes>
     </Router>
   );
